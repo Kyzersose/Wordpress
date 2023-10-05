@@ -1,0 +1,23 @@
+services:
+  wordpress:
+    image: wordpress:php8.2-fpm-alpine
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+    volumes:
+    - wordpress:/var/www/html
+  
+  db:
+    image: mysql:8.1
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpressapp
+      MYSQL_PASSWORD: secureit!
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  wordpress:
+  db:
