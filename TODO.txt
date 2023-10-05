@@ -1,0 +1,6 @@
+#20203-10-5:
+Specify a version of wordpress
+Can wordpress be an alpine version?
+Add specifics to wordpress to avoid setup process
+    Adjust the wordpress folders for image assets, themes, etc.
+    Adjust to local volumes for easier local dev
