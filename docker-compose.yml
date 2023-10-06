@@ -11,7 +11,7 @@ services:
     restart: always
   
   wordpress:
-    image: wordpress
+    image: wordpress:6.3-apache
     ports:
       - 8080:80
     depends_on:
